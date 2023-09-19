@@ -1,0 +1,13 @@
+﻿  Global.cpp
+  Packet.cpp
+  Session.cpp
+  Socket.cpp
+  main.cpp
+  코드를 생성하고 있습니다...
+Socket.obj : error LNK2019: __imp_accept"public: unsigned __int64 __cdecl Socket::Accept_socket(void)" (?Accept_socket@Socket@@QEAA_KXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Socket.obj : error LNK2019: __imp_bind"public: bool __cdecl Socket::Bind_socket(int)" (?Bind_socket@Socket@@QEAA_NH@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Socket.obj : error LNK2019: __imp_htonl"public: bool __cdecl Socket::Bind_socket(int)" (?Bind_socket@Socket@@QEAA_NH@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Socket.obj : error LNK2019: __imp_htons"public: bool __cdecl Socket::Bind_socket(int)" (?Bind_socket@Socket@@QEAA_NH@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
+Socket.obj : error LNK2019: __imp_listen"public: bool __cdecl Socket::Listen_socket(void)" (?Listen_socket@Socket@@QEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+Socket.obj : error LNK2019: __imp_socket"public: bool __cdecl Socket::Create_socket(void)" (?Create_socket@Socket@@QEAA_NXZ) 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Users\재욱\source\repos\TangTang_Server\x64\Debug\TangTang_Server.exe : fatal error LNK1120: 6개의 확인할 수 없는 외부 참조입니다.
