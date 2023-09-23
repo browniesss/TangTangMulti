@@ -1,7 +1,10 @@
 #pragma once
 #include "Global.h"
+#include "Packet.h"
 
-class Session
+
+class Session : public Packet
 {
+
 };
 

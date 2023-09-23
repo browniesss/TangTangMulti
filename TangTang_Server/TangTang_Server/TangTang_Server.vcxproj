@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Global.h" />
+    <ClInclude Include="M_Session.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="Session.h" />
     <ClInclude Include="Socket.h" />
@@ -148,6 +149,7 @@
   <ItemGroup>
     <ClCompile Include="Global.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="M_Session.cpp" />
     <ClCompile Include="Packet.cpp" />
     <ClCompile Include="Session.cpp" />
     <ClCompile Include="Socket.cpp" />

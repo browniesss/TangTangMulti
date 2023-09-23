@@ -38,6 +38,9 @@
     <ClInclude Include="Singleton.h">
       <Filter>소스 파일\Singleton</Filter>
     </ClInclude>
+    <ClInclude Include="M_Session.h">
+      <Filter>소스 파일\Server_Socket</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Socket.cpp">
@@ -54,6 +57,9 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="M_Session.cpp">
+      <Filter>소스 파일\Server_Socket</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

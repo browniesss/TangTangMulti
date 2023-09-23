@@ -74,3 +74,62 @@ SOCKET Socket::Accept_socket()
 
 	return cl_sock;
 }
+
+bool Socket::Send_socket(char* p_buf, int p_size)
+{
+	int retval;
+	DWORD sendbytes;
+	WSABUF temp;
+
+	ZeroMemory(&s_overlapped.m_overlapped, sizeof(s_overlapped.m_overlapped));
+
+	temp.buf = p_buf;
+	temp.len = p_size;
+
+
+
+	retval = WSASend(m_socket, &temp, 1, &sendbytes, 0, &s_overlapped.m_overlapped, NULL);
+	if (retval == SOCKET_ERROR)
+	{
+		if (WSAGetLastError() != WSA_IO_PENDING)
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
+bool Socket::Recv_socket(char* p_buf, int p_size)
+{
+	int retval;
+	DWORD flags = 0;
+	DWORD recvbytes;
+	WSABUF temp;
+
+	ZeroMemory(&r_overlapped.m_overlapped, sizeof(r_overlapped.m_overlapped));
+
+	temp.buf = p_buf;
+	temp.len = p_size;
+
+	retval = WSARecv(m_socket, &temp, 1, &recvbytes, &flags, &r_overlapped.m_overlapped, NULL);
+	if (retval == SOCKET_ERROR)
+	{
+		if (WSAGetLastError() != WSA_IO_PENDING)
+		{
+			return false;
+		}
+	}
+
+	return true;
+}
+
+int Socket::Get_peername()
+{
+	int addrlen = sizeof(m_addr);
+	getpeername(m_socket, (SOCKADDR*)&m_addr, &addrlen);
+
+	return m_socket;
+}
+
+

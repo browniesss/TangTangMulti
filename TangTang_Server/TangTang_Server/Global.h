@@ -10,7 +10,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <tchar.h>
-
+#include <list>
 
 using namespace std;
 
