@@ -35,7 +35,7 @@ public class PlayerWeapon : MonoBehaviour
                 var bullet = CreateBullet();
                 var rigid = bullet.GetComponent<Rigidbody2D>();
                 
-                rigid.velocity = -shootingPos.right * 10f;
+                rigid.velocity = -shootingPos.right * 30f;
             }
                 break;
         }

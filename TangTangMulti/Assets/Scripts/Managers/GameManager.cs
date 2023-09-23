@@ -1,18 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoSingleton<GameManager>
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField]
+    private GameObject LevelUISystem;
+
+    private void Start()
     {
-        
+        StartCoroutine(CoGameStart());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator CoGameStart()
     {
+        yield return new WaitForSeconds(15f);
         
+        LevelUISystem.gameObject.SetActive(true);
+        Time.timeScale = 0f;
+
+        yield return new WaitUntil(() => !LevelUISystem.gameObject.activeSelf);
     }
 }
